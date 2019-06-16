@@ -1,0 +1,83 @@
+package com.example.myapplication
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreae(savedInstanceState: Bundle?)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        }
+
+        fun sendMessage(view: View) {
+
+val editText = findViewbyID<EditText>(R.id.editText)
+val message = editText.text.toString()
+val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+    putExtra(EXTRA_MESSAGE, message)
+        }
+startActivity(intent)
+
+Intent intent = new Intent(this, DisplayMessageActivity.class):
+EditTExt editText = (EditText) findViewbyID(R.id.editText);
+String message = editText.getText().toString();
+intent.putExtra(EXTRA_MESSAGE, message);
+startActivity(intent);
+    conversation= True
+        Qone = True
+        Qtwo = False
+        Qthree = False
+        Qfour = True
+        Qfive = True
+        Emergency = True
+        while (conversation == True):
+        if (Qone == True):
+        x = input("How was work today?")
+        if ( x == "good"):
+        Qtwo=True
+        Qone=False
+        elif(x == "bad"):
+        Qthree=True
+        Qtwo=False
+        else:
+        print("Again")
+        if (Qtwo == True):
+        x = input("Are we still on for dinner tomorrow?")
+        if (x == "yes"):
+        Qthree = True
+        Qtwo = False
+        elif (x == "no"):
+        Qfour = True
+        Qthree = False
+        if (Qfour == True):
+        x = input("Where should we eat?")
+        if (x == "Italian"):
+        Qfive = True
+        Qfour = False
+        elif (x == "Korean"):
+        Qfour = True
+        Qfive = False
+        else:
+        else:
+        print("Again")
+        if (Qthree == True):
+        x = input("Should I call the restaurant?")
+        if (x == "yes"):
+        Qfour = Emergency
+        Qthree = False
+        elif (x == "no"):
+        Qthree = True
+        Qtwo = False
+        else:
+        print("Again")
+        print("Again")
+        if (Qfive == True):
+        x = input("Are you close to your house?")
+        if (x == "yes"):
+        Qfive = True
+        if (x == "almost"):
+        Qfive = True
+        elif (x == "no"):
+        Qfive = False
+        Conversation = False
+        }
